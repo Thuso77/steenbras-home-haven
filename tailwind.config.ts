@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,15 +53,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				olive: {
+					DEFAULT: '#3C3F20',
+					light: '#4E512A',
+					dark: '#2A2D16'
+				},
+				orange: {
+					DEFAULT: '#E88E47',
+					light: '#F0A66B',
+					dark: '#D07730'
 				}
 			},
 			borderRadius: {
@@ -84,11 +85,44 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'carousel': {
+					'0%, 20%': {
+						transform: 'translateX(0)'
+					},
+					'25%, 45%': {
+						transform: 'translateX(-100%)'
+					},
+					'50%, 70%': {
+						transform: 'translateX(-200%)'
+					},
+					'75%, 95%': {
+						transform: 'translateX(-300%)'
+					},
+					'100%': {
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'carousel': 'carousel 20s infinite'
+			},
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+				'roboto': ['Roboto', 'sans-serif']
 			}
 		}
 	},
