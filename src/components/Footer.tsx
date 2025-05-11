@@ -1,6 +1,6 @@
 
 import React from 'react';
-import placeholderLogo from '/placeholder.svg';
+import steenbrasLogo from '/lovable-uploads/f27de235-0046-41e9-b89c-fc1a0a66d11e.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,14 +10,14 @@ const Footer = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <div className="flex items-center mb-4">
+            <div className="flex flex-col items-center md:items-start mb-4">
               <img 
-                src={placeholderLogo}
+                src={steenbrasLogo}
                 alt="Steenbras Properties Logo" 
-                className="h-12 w-auto"
+                className="h-12 w-auto mb-2"
               />
+              <h3 className="text-lg font-semibold">Steenbras Properties</h3>
             </div>
-            <h3 className="text-lg font-semibold mb-2">Steenbras Properties</h3>
             <p className="text-sm text-white/70 mb-4">Serviced Communal Living Hostels – Comfort. Community. Affordability.</p>
           </div>
           
@@ -34,9 +34,9 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-white/70">
-              <li>123 Main Road, Cape Town</li>
-              <li>Western Cape, 8001</li>
-              <li>info@steenbrasproperties.co.za</li>
+              <li>9 Steenbras, Brooklyn</li>
+              <li>Cape Town, Western Cape, 7405</li>
+              <li>info@steenbras.co.za</li>
               <li>+27 21 555 0123</li>
             </ul>
           </div>
@@ -70,7 +70,7 @@ const Footer = () => {
         
         <div className="border-t border-olive-light/30 mt-12 pt-6 text-center">
           <p className="text-white/60 text-sm">
-            &copy; {currentYear} Steenbras Properties. All rights reserved.
+            &copy; {currentYear} Steenbras Properties. All rights reserved. | <a href="https://steenbras.co.za" className="hover:text-orange transition-colors">steenbras.co.za</a>
           </p>
         </div>
       </div>

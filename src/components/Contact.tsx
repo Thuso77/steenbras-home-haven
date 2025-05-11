@@ -20,8 +20,8 @@ const Contact = () => {
               <div className="space-y-4">
                 <div>
                   <p className="text-orange font-medium">Email</p>
-                  <a href="mailto:info@steenbrasproperties.co.za" className="text-white hover:text-orange transition-colors">
-                    info@steenbrasproperties.co.za
+                  <a href="mailto:info@steenbras.co.za" className="text-white hover:text-orange transition-colors">
+                    info@steenbras.co.za
                   </a>
                 </div>
                 
@@ -35,9 +35,10 @@ const Contact = () => {
                 <div>
                   <p className="text-orange font-medium">Address</p>
                   <address className="not-italic text-white/80">
-                    123 Main Road<br />
+                    9 Steenbras<br />
+                    Brooklyn<br />
                     Cape Town<br />
-                    Western Cape, 8001<br />
+                    Western Cape, 7405<br />
                     South Africa
                   </address>
                 </div>
@@ -57,7 +58,7 @@ const Contact = () => {
           <div className="lg:col-span-3">
             <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423283.43554952523!2d18.35144756084332!3d-33.92463565349235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f8826eed7%3A0x687fe1fc2828aa87!2sCape%20Town%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1715452527214!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.2679183087416!2d18.46458805968245!3d-33.91962944209873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5d1197ceba25%3A0x4ef92fbc1e811a7d!2s9%20Steenbras%2C%20Brooklyn%2C%20Cape%20Town%2C%207405!5e0!3m2!1sen!2sza!4v1715452527214!5m2!1sen!2sza"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
