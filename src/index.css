@@ -75,18 +75,6 @@
   @apply bg-transparent hover:bg-olive-light text-orange border border-orange font-medium py-3 px-6 rounded-md transition-colors duration-200 inline-block;
 }
 
-.carousel-container {
-  @apply overflow-hidden w-full relative;
-}
-
-.carousel-track {
-  @apply flex transition-transform duration-500;
-}
-
-.carousel-slide {
-  @apply min-w-full;
-}
-
 /* For the accordion styling */
 .accordion-content {
   height: 0;

@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
     "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80",
     "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80",
@@ -10,22 +11,34 @@ const Hero = () => {
     "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80"
   ];
 
+  useEffect(() => {
+    // Create a smoother carousel transition
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section id="home" className="relative bg-olive-dark min-h-[600px] flex items-center">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="carousel-container h-full">
-          <div className="carousel-track flex h-full animate-carousel">
-            {images.map((src, index) => (
-              <div key={index} className="carousel-slide min-w-full h-full relative">
-                <div className="absolute inset-0 bg-olive/70 z-10"></div>
-                <img
-                  src={src}
-                  alt={`Steenbras Properties Interior ${index + 1}`}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            ))}
-          </div>
+        <div className="h-full w-full relative">
+          {images.map((src, index) => (
+            <div 
+              key={index} 
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                currentSlide === index ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <div className="absolute inset-0 bg-olive/70 z-10"></div>
+              <img
+                src={src}
+                alt={`Steenbras Properties Interior ${index + 1}`}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
