@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Bed, Bath, Couch, Garage, Kitchen, Wifi, Power, Water } from 'lucide-react';
+import { Bed, Bath, Sofa, Home, Utensils, Wifi, Zap, Droplet } from 'lucide-react';
 
 const Amenities = () => {
   const amenities = [
@@ -10,12 +10,12 @@ const Amenities = () => {
       description: "Stay connected with unlimited high-speed internet access"
     },
     {
-      icon: <Water size={32} />,
+      icon: <Droplet size={32} />,
       title: "Clean Running Water",
       description: "Enjoy access to clean running water throughout your stay"
     },
     {
-      icon: <Power size={32} />,
+      icon: <Zap size={32} />,
       title: "Backup Power",
       description: "Never worry about load shedding with our backup power solutions"
     },
@@ -25,7 +25,7 @@ const Amenities = () => {
       description: "Sleep well with a comfortable bed and fresh, clean linen"
     },
     {
-      icon: <Kitchen size={32} />,
+      icon: <Utensils size={32} />,
       title: "Shared Kitchen",
       description: "Access to a fully equipped kitchen with provided utensils and cutlery"
     },
@@ -35,12 +35,12 @@ const Amenities = () => {
       description: "Clean, well-maintained bathroom facilities"
     },
     {
-      icon: <Couch size={32} />,
+      icon: <Sofa size={32} />,
       title: "Lounge/TV Room",
       description: "Relax in our comfortable communal lounge with entertainment"
     },
     {
-      icon: <Garage size={32} />,
+      icon: <Home size={32} />,
       title: "Shared Garage",
       description: "Secure parking space available for residents"
     }
