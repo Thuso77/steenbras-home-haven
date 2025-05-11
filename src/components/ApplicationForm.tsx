@@ -13,6 +13,7 @@ const ApplicationForm = () => {
     employmentStatus: '',
     moveInDate: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -22,26 +23,49 @@ const ApplicationForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
     
-    // Show success toast
-    toast({
-      title: "Application Submitted!",
-      description: "We'll contact you shortly to discuss your application.",
-      duration: 5000,
-    });
-    
-    // Reset form
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      idNumber: '',
-      employmentStatus: '',
-      moveInDate: ''
-    });
+    try {
+      const response = await fetch('https://hook.eu2.make.com/bi4y1fmajllwyfxyap5m3r487x10gqvu', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        toast({
+          title: "Application Submitted!",
+          description: "We'll contact you shortly to discuss your application.",
+          duration: 5000,
+        });
+        
+        // Reset form
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          idNumber: '',
+          employmentStatus: '',
+          moveInDate: ''
+        });
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Submission Error",
+        description: "There was a problem submitting your application. Please try again later.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -148,8 +172,8 @@ const ApplicationForm = () => {
             </div>
             
             <div className="mt-8">
-              <Button type="submit" className="w-full btn-primary">
-                Submit Application
+              <Button type="submit" className="w-full btn-primary" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit Application"}
               </Button>
             </div>
             

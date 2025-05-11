@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import placeholderLogo from '/placeholder.svg';
+import steenbrasLogo from '/lovable-uploads/f27de235-0046-41e9-b89c-fc1a0a66d11e.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +17,11 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center">
           <img 
-            src={placeholderLogo}
+            src={steenbrasLogo}
             alt="Steenbras Properties Logo" 
             className="h-12 w-auto"
           />
           <div className="ml-3 hidden md:block">
-            <h1 className="text-xl font-bold text-white">Steenbras Properties</h1>
             <p className="text-xs text-orange">Serviced Communal Living Hostels</p>
           </div>
         </div>
