@@ -27,8 +27,8 @@ const Contact = () => {
                 
                 <div>
                   <p className="text-orange font-medium">Phone</p>
-                  <a href="tel:+27215550123" className="text-white hover:text-orange transition-colors">
-                    +27 21 555 0123
+                  <a href="tel:+27614749115" className="text-white hover:text-orange transition-colors">
+                    +27 61 474 9115
                   </a>
                 </div>
                 
@@ -65,7 +65,7 @@ const Contact = () => {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps location of Steenbras Properties"
+                title="Google Maps location of Steenbras Hostel"
               ></iframe>
             </div>
           </div>

@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import { WhatsApp } from "lucide-react";
 
 const ApplicationForm = () => {
   const { toast } = useToast();
@@ -171,9 +172,25 @@ const ApplicationForm = () => {
               </div>
             </div>
             
-            <div className="mt-8">
-              <Button type="submit" className="w-full btn-primary" disabled={isSubmitting}>
+            <div className="mt-8 flex flex-col md:flex-row gap-4">
+              <Button type="submit" className="w-full md:flex-1 btn-primary" disabled={isSubmitting}>
                 {isSubmitting ? "Submitting..." : "Submit Application"}
+              </Button>
+              
+              <Button 
+                asChild
+                type="button" 
+                className="w-full md:flex-1 bg-green-500 hover:bg-green-600 text-white"
+              >
+                <a 
+                  href="https://wa.me/27614749115" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2"
+                >
+                  <WhatsApp size={20} />
+                  <span>Chat on WhatsApp</span>
+                </a>
               </Button>
             </div>
             
