@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { WhatsApp } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 const ApplicationForm = () => {
   const { toast } = useToast();
@@ -188,7 +188,7 @@ const ApplicationForm = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2"
                 >
-                  <WhatsApp size={20} />
+                  <MessageSquare size={20} />
                   <span>Chat on WhatsApp</span>
                 </a>
               </Button>
