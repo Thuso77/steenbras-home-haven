@@ -35,7 +35,7 @@ const Contact = () => {
                 <div>
                   <p className="text-orange font-medium">Address</p>
                   <address className="not-italic text-white/80">
-                    9 Steenbras<br />
+                    NO 9, Steenbras Street<br />
                     Brooklyn<br />
                     Cape Town<br />
                     Western Cape, 7405<br />
@@ -46,9 +46,7 @@ const Contact = () => {
                 <div>
                   <p className="text-orange font-medium">Office Hours</p>
                   <p className="text-white/80">
-                    Monday - Friday: 8:00 AM - 5:00 PM<br />
-                    Saturday: 9:00 AM - 1:00 PM<br />
-                    Sunday: Closed
+                    We are open everyday: 9:00 AM - 5:00 PM
                   </p>
                 </div>
               </div>

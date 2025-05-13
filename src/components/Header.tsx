@@ -32,7 +32,11 @@ const Header = () => {
           <a href="#amenities" className="text-white hover:text-orange transition-colors">Amenities</a>
           <a href="#apply" className="text-white hover:text-orange transition-colors">Apply Now</a>
           <a href="#contact" className="text-white hover:text-orange transition-colors">Contact</a>
-          <Button className="bg-orange hover:bg-orange-light text-white">Book a Viewing</Button>
+          <Button className="bg-orange hover:bg-orange-light text-white" asChild>
+            <a href="https://wa.me/27614749115" target="_blank" rel="noopener noreferrer">
+              Book a Viewing
+            </a>
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -49,7 +53,11 @@ const Header = () => {
             <a href="#amenities" className="text-white hover:text-orange transition-colors" onClick={toggleMenu}>Amenities</a>
             <a href="#apply" className="text-white hover:text-orange transition-colors" onClick={toggleMenu}>Apply Now</a>
             <a href="#contact" className="text-white hover:text-orange transition-colors" onClick={toggleMenu}>Contact</a>
-            <Button className="bg-orange hover:bg-orange-light text-white w-full">Book a Viewing</Button>
+            <Button className="bg-orange hover:bg-orange-light text-white w-full" asChild>
+              <a href="https://wa.me/27614749115" target="_blank" rel="noopener noreferrer">
+                Book a Viewing
+              </a>
+            </Button>
           </nav>
         </div>
       )}

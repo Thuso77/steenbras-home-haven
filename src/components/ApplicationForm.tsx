@@ -125,7 +125,7 @@ const ApplicationForm = () => {
               </div>
               
               <div className="col-span-1">
-                <label htmlFor="idNumber" className="block mb-2 text-sm font-medium">ID Number</label>
+                <label htmlFor="idNumber" className="block mb-2 text-sm font-medium">ID Number / Passport</label>
                 <input
                   id="idNumber"
                   name="idNumber"
@@ -134,7 +134,7 @@ const ApplicationForm = () => {
                   onChange={handleChange}
                   required
                   className="form-input"
-                  placeholder="Enter your ID number"
+                  placeholder="Enter your ID number or passport"
                 />
               </div>
               
