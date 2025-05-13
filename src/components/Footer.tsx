@@ -34,10 +34,10 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-white/70">
-              <li>9 Steenbras, Brooklyn</li>
+              <li>9 Steenbras Street, Brooklyn</li>
               <li>Cape Town, Western Cape, 7405</li>
               <li>info@steenbras.co.za</li>
-              <li>+27 21 555 0123</li>
+              <li>+27 61 474 9115</li>
             </ul>
           </div>
         </div>

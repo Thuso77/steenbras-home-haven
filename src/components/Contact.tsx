@@ -35,7 +35,7 @@ const Contact = () => {
                 <div>
                   <p className="text-orange font-medium">Address</p>
                   <address className="not-italic text-white/80">
-                    NO 9, Steenbras Street<br />
+                    9 Steenbras Street<br />
                     Brooklyn<br />
                     Cape Town<br />
                     Western Cape, 7405<br />
