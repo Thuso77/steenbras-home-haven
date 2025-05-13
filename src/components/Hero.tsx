@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white tracking-wide">
             <span className="block text-orange uppercase">WELCOME TO</span>
-            <span className="block text-white uppercase drop-shadow-lg">STEENBRAS HOSTEL</span>
+            <span className="block text-white uppercase drop-shadow-lg">STEENBRAS HOSTELS</span>
           </h1>
           <p className="text-xl mb-6 text-white/90">
             Serviced Communal Living Hostels – Comfort. Community. Affordability.
