@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -17,11 +16,13 @@ const Header = () => {
       <div className="container-custom flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <img 
-            src={steenbrasLogo}
-            alt="Steenbras Properties Logo" 
-            className="h-12 w-auto"
-          />
+          <a href="#home" className="block">
+            <img 
+              src={steenbrasLogo}
+              alt="Steenbras Properties Logo" 
+              className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+            />
+          </a>
           <div className="ml-3 hidden md:block">
             <p className="text-xs text-orange">Serviced Communal Living Hostels</p>
           </div>
