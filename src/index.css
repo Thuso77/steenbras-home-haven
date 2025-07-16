@@ -49,6 +49,19 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-poppins font-semibold;
   }
+
+  /* Optimize images for better performance */
+  img {
+    @apply max-w-full h-auto;
+  }
+}
+
+/* Critical CSS for above-the-fold content */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: hsl(var(--secondary));
 }
 
 .amenity-icon {
@@ -75,6 +88,15 @@
   @apply bg-transparent hover:bg-olive-light text-orange border border-orange font-medium py-3 px-6 rounded-md transition-colors duration-200 inline-block;
 }
 
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* For the accordion styling */
 .accordion-content {
   height: 0;
@@ -84,4 +106,9 @@
 
 .accordion-content.open {
   height: auto;
+}
+
+/* Loading optimization */
+.loading-skeleton {
+  @apply animate-pulse bg-olive-light rounded;
 }
