@@ -77,7 +77,7 @@ const Hero = () => {
             <span className="block text-orange uppercase">WELCOME TO</span>
             <span className="block text-white uppercase drop-shadow-lg">STEENBRAS HOSTELS</span>
           </h1>
-          <p className="text-xl mb-6 text-white/90">
+          <p className="text-2xl md:text-3xl mb-6 text-white/90 font-medium">
             Serviced Communal Living Hostels – Comfort. Community. Affordability.
           </p>
           <p className="mb-8 text-white/80">
